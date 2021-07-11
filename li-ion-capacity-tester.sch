@@ -1,0 +1,364 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 7400 7500 0    50   ~ 0
+Li-ion Battery Capacity Tester
+Text Notes 8150 7650 0    50   ~ 0
+19 June 2021
+Text Notes 10600 7650 0    50   ~ 0
+0-1
+Text Notes 7000 6650 0    50   ~ 0
+0-1: Initial schematic.
+$Comp
+L MCU_Module:Arduino_UNO_R3 A?
+U 1 1 60CD6E8E
+P 7850 3500
+F 0 "A?" H 7850 4681 50  0000 C CNN
+F 1 "Arduino_UNO_R3" H 7850 4590 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R3" H 7850 3500 50  0001 C CIN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 7850 3500 50  0001 C CNN
+	1    7850 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L li-ion-capacity-tester:OLED_Display U?
+U 1 1 60CDA27E
+P 9650 4100
+F 0 "U?" H 10080 4146 50  0000 L CNN
+F 1 "OLED_Display" H 10080 4055 50  0000 L CNN
+F 2 "Display:EA_T123X-I2C" H 9650 3500 50  0001 C CNN
+F 3 "http://www.lcd-module.de/pdf/doma/t123-i2c.pdf" H 9650 3600 50  0001 C CNN
+	1    9650 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 60CDB024
+P 3300 2250
+F 0 "BT?" H 3418 2346 50  0000 L CNN
+F 1 "Battery_Cell" H 3418 2255 50  0000 L CNN
+F 2 "" V 3300 2310 50  0001 C CNN
+F 3 "~" V 3300 2310 50  0001 C CNN
+	1    3300 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+9V #PWR?
+U 1 1 60CDBAF9
+P 3300 1650
+F 0 "#PWR?" H 3300 1500 50  0001 C CNN
+F 1 "+9V" H 3315 1823 50  0000 C CNN
+F 2 "" H 3300 1650 50  0001 C CNN
+F 3 "" H 3300 1650 50  0001 C CNN
+	1    3300 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60CDC261
+P 3300 2750
+F 0 "#PWR?" H 3300 2500 50  0001 C CNN
+F 1 "GND" H 3305 2577 50  0000 C CNN
+F 2 "" H 3300 2750 50  0001 C CNN
+F 3 "" H 3300 2750 50  0001 C CNN
+	1    3300 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+9V #PWR?
+U 1 1 60CDC745
+P 7750 2000
+F 0 "#PWR?" H 7750 1850 50  0001 C CNN
+F 1 "+9V" H 7765 2173 50  0000 C CNN
+F 2 "" H 7750 2000 50  0001 C CNN
+F 3 "" H 7750 2000 50  0001 C CNN
+	1    7750 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60CDD0FA
+P 8050 2000
+F 0 "#PWR?" H 8050 1850 50  0001 C CNN
+F 1 "+5V" H 8065 2173 50  0000 C CNN
+F 2 "" H 8050 2000 50  0001 C CNN
+F 3 "" H 8050 2000 50  0001 C CNN
+	1    8050 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60CDD66F
+P 9650 3300
+F 0 "#PWR?" H 9650 3150 50  0001 C CNN
+F 1 "+5V" H 9665 3473 50  0000 C CNN
+F 2 "" H 9650 3300 50  0001 C CNN
+F 3 "" H 9650 3300 50  0001 C CNN
+	1    9650 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60CDDA91
+P 9650 4900
+F 0 "#PWR?" H 9650 4650 50  0001 C CNN
+F 1 "GND" H 9655 4727 50  0000 C CNN
+F 2 "" H 9650 4900 50  0001 C CNN
+F 3 "" H 9650 4900 50  0001 C CNN
+	1    9650 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60CDE239
+P 7750 4850
+F 0 "#PWR?" H 7750 4600 50  0001 C CNN
+F 1 "GND" H 7755 4677 50  0000 C CNN
+F 2 "" H 7750 4850 50  0001 C CNN
+F 3 "" H 7750 4850 50  0001 C CNN
+	1    7750 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1650 3300 2050
+Wire Wire Line
+	3300 2350 3300 2750
+Wire Wire Line
+	7750 2000 7750 2500
+Wire Wire Line
+	8050 2000 8050 2500
+Wire Wire Line
+	7950 4600 7850 4600
+Connection ~ 7850 4600
+Wire Wire Line
+	7850 4600 7750 4600
+Wire Wire Line
+	7750 4600 7750 4850
+Connection ~ 7750 4600
+Wire Wire Line
+	9650 4600 9650 4900
+Wire Wire Line
+	9650 3300 9650 3600
+Wire Wire Line
+	8350 4200 9150 4200
+Wire Wire Line
+	8350 4300 9150 4300
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 60CE4302
+P 5050 4000
+F 0 "BT?" V 5305 4050 50  0000 C CNN
+F 1 "Battery_Cell" V 5214 4050 50  0000 C CNN
+F 2 "" V 5050 4060 50  0001 C CNN
+F 3 "~" V 5050 4060 50  0001 C CNN
+	1    5050 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60CE4DB2
+P 4650 5850
+F 0 "R?" H 4720 5896 50  0000 L CNN
+F 1 "5R / 5W" H 4720 5805 50  0000 L CNN
+F 2 "" V 4580 5850 50  0001 C CNN
+F 3 "~" H 4650 5850 50  0001 C CNN
+	1    4650 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60CE5169
+P 2300 4850
+F 0 "R?" V 2093 4850 50  0000 C CNN
+F 1 "33k" V 2184 4850 50  0000 C CNN
+F 2 "" V 2230 4850 50  0001 C CNN
+F 3 "~" H 2300 4850 50  0001 C CNN
+	1    2300 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60CE5644
+P 2750 5250
+F 0 "C?" H 2865 5296 50  0000 L CNN
+F 1 "0.47uF" H 2865 5205 50  0000 L CNN
+F 2 "" H 2788 5100 50  0001 C CNN
+F 3 "~" H 2750 5250 50  0001 C CNN
+	1    2750 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7000 Q?
+U 1 1 60CE5F31
+P 4550 4950
+F 0 "Q?" H 4754 4996 50  0000 L CNN
+F 1 "2N7000" H 4754 4905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4750 4875 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 4550 4950 50  0001 L CNN
+	1    4550 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM741 U?
+U 1 1 60CE6CD0
+P 3600 4950
+F 0 "U?" H 3944 4996 50  0000 L CNN
+F 1 "LM741" H 3944 4905 50  0000 L CNN
+F 2 "" H 3650 5000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm741.pdf" H 3750 5100 50  0001 C CNN
+	1    3600 4950
+	1    0    0    -1  
+$EndComp
+Text GLabel 7050 3400 0    50   Input ~ 0
+Set_Current
+Text GLabel 8550 3500 2    50   Input ~ 0
+Read_Voltage
+Text GLabel 8550 3600 2    50   Input ~ 0
+Read_Current
+Wire Wire Line
+	8350 3500 8550 3500
+Wire Wire Line
+	8350 3600 8550 3600
+Text GLabel 1850 4850 0    50   Input ~ 0
+Set_Current
+$Comp
+L power:GND #PWR?
+U 1 1 60CED5C0
+P 2750 5500
+F 0 "#PWR?" H 2750 5250 50  0001 C CNN
+F 1 "GND" H 2755 5327 50  0000 C CNN
+F 2 "" H 2750 5500 50  0001 C CNN
+F 3 "" H 2750 5500 50  0001 C CNN
+	1    2750 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60CED940
+P 4650 6100
+F 0 "#PWR?" H 4650 5850 50  0001 C CNN
+F 1 "GND" H 4655 5927 50  0000 C CNN
+F 2 "" H 4650 6100 50  0001 C CNN
+F 3 "" H 4650 6100 50  0001 C CNN
+	1    4650 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60CEDD18
+P 5400 4150
+F 0 "#PWR?" H 5400 3900 50  0001 C CNN
+F 1 "GND" H 5405 3977 50  0000 C CNN
+F 2 "" H 5400 4150 50  0001 C CNN
+F 3 "" H 5400 4150 50  0001 C CNN
+	1    5400 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60CEE395
+P 3500 5250
+F 0 "#PWR?" H 3500 5000 50  0001 C CNN
+F 1 "GND" H 3505 5077 50  0000 C CNN
+F 2 "" H 3500 5250 50  0001 C CNN
+F 3 "" H 3500 5250 50  0001 C CNN
+	1    3500 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4950 3900 4950
+Wire Wire Line
+	3300 4850 2750 4850
+Wire Wire Line
+	2150 4850 1850 4850
+Wire Wire Line
+	2750 5100 2750 4850
+Connection ~ 2750 4850
+Wire Wire Line
+	2750 4850 2450 4850
+Wire Wire Line
+	2750 5400 2750 5500
+Wire Wire Line
+	4650 5150 4650 5300
+Wire Wire Line
+	4650 6000 4650 6100
+$Comp
+L power:+9V #PWR?
+U 1 1 60CF104A
+P 3500 4650
+F 0 "#PWR?" H 3500 4500 50  0001 C CNN
+F 1 "+9V" H 3515 4823 50  0000 C CNN
+F 2 "" H 3500 4650 50  0001 C CNN
+F 3 "" H 3500 4650 50  0001 C CNN
+	1    3500 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 5550 3200 5550
+Wire Wire Line
+	3200 5550 3200 5050
+Wire Wire Line
+	3200 5050 3300 5050
+Connection ~ 4650 5550
+NoConn ~ 3600 5250
+NoConn ~ 3700 5250
+NoConn ~ 7350 2900
+NoConn ~ 7350 3000
+NoConn ~ 7350 3100
+NoConn ~ 7350 3200
+NoConn ~ 7350 3300
+NoConn ~ 7350 3500
+NoConn ~ 7350 3600
+NoConn ~ 7350 3700
+NoConn ~ 7350 3900
+NoConn ~ 7350 4000
+NoConn ~ 7350 4100
+NoConn ~ 7350 4200
+NoConn ~ 8350 4000
+NoConn ~ 8350 3900
+NoConn ~ 8350 3800
+NoConn ~ 8350 3700
+NoConn ~ 8350 3300
+NoConn ~ 8350 3100
+NoConn ~ 8350 2900
+NoConn ~ 7950 2500
+Text GLabel 5000 4600 2    50   Input ~ 0
+Read_Voltage
+Text GLabel 5000 5300 2    50   Input ~ 0
+Read_Current
+Wire Wire Line
+	5000 5300 4650 5300
+Connection ~ 4650 5300
+Wire Wire Line
+	4650 5300 4650 5550
+Wire Wire Line
+	5000 4600 4650 4600
+Connection ~ 4650 4600
+Wire Wire Line
+	4650 4600 4650 4750
+Wire Wire Line
+	4650 4000 4850 4000
+Wire Wire Line
+	4650 4000 4650 4600
+Wire Wire Line
+	5150 4000 5400 4000
+Wire Wire Line
+	5400 4000 5400 4150
+Wire Wire Line
+	4650 5550 4650 5700
+Wire Wire Line
+	7050 3400 7350 3400
+NoConn ~ 7350 3800
+$EndSCHEMATC

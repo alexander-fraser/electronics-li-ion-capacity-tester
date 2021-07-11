@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name li-ion-capacity-tester)(type Legacy)(uri ${KIPRJMOD}/li-ion-capacity-tester.lib)(options "")(descr ""))
+)

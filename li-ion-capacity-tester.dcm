@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP OLED_Display
+D 3 Lines, 12 character alpha numeric LCD, transreflective STN and FSTN Gray, I2C, single or dual power
+K display LCD 7-segment
+F http://www.lcd-module.de/pdf/doma/t123-i2c.pdf
+$ENDCMP
+#
+#End Doc Library
